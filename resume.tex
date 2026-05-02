@@ -1,0 +1,193 @@
+\documentclass[10pt]{article}
+
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{fontawesome}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\geometry{
+    top=10mm,
+    bottom=10mm,
+    left=14mm,
+    right=14mm
+}
+
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\renewcommand{\arraystretch}{0.95}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=blue,
+    citecolor=black,
+    anchorcolor=black
+}
+
+\setlist[itemize]{
+    noitemsep,
+    topsep=0pt,
+    partopsep=0pt,
+    parsep=0pt,
+    itemsep=0pt,
+    leftmargin=1.1em
+}
+
+\titleformat{\section}{\large\bfseries\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{8pt}{5pt}
+
+\newif\ifen
+\newif\ifru
+\newcommand{\en}[1]{\ifen#1\fi}
+\newcommand{\ru}[1]{\ifru#1\fi}
+
+%\rutrue
+\entrue
+
+\newcommand{\dates}[2]{\footnotesize #2\\[-1pt]\footnotesize #1}
+
+\newcommand{\workentry}[3]{
+\begin{tabular}{@{}p{0.125\linewidth}|p{0.82\linewidth}@{}}
+\raggedleft #1 & \raisebox{-1.5pt}[0pt][0pt]{\textbf{#2}} \\[-4pt]
+& #3
+\end{tabular}\vspace{1mm}
+}
+
+\begin{document}
+
+\begin{center}
+    {\Huge \textbf{\ru{Никита Зайцев}\en{Nikita Zaytsev}}}
+\end{center}
+
+\vspace{2mm}
+
+\begin{center}
+\small
+\faEnvelope\ \href{mailto:nickita-zaitsiev@ya.ru}{nickita-zaitsiev@ya.ru}
+\hspace{1cm}
+\faPhone\ \href{tel:+79657447577}{+7 965 744-75-77}
+\hspace{1cm}
+\faPaperPlane\ \href{https://t.me/nickzay}{@nickzay}
+\hspace{1cm}
+\faGithub\ \href{https://github.com/NickZay}{NickZay}
+\hspace{1cm}
+\faLinkedin\ \href{https://www.linkedin.com/in/nickzay}{nickzay}
+\hspace{1cm}
+hh: \href{https://hh.ru/resume/e86c2e50ff0bf0d5320039ed1f686758497349}{resume}
+\end{center}
+
+\section{\ru{О себе}\en{Summary}}
+
+\ru{Frontend / Fullstack-разработчик с коммерческим опытом в Яндексе, Сбере и продуктовых командах. Основной фокус --- React, TypeScript и продуктовые интерфейсы; есть также backend-опыт на Java и Rust, который помогает быстрее разбираться в API, интеграциях и бизнес-логике.}
+\en{Frontend / Fullstack developer with commercial experience at Yandex, Sberbank, and product teams. Focused on React, TypeScript, and product web interfaces, with additional backend experience in Java and Rust that helps in working with APIs, integrations, and business logic.}
+
+\section{\ru{Опыт работы}\en{Work Experience}}
+
+\workentry
+{\dates{Sep 2024}{Present}}
+{\ru{Яндекс --- Frontend-разработчик}\en{Yandex --- Frontend Developer}}
+{
+\begin{itemize}
+    \item \ru{Переехал с yarn на pnpm, что ускорило прохождение CI в 2--3 раза}
+          \en{Migrated the project from yarn to pnpm, reducing CI execution time by 2--3x}
+    \item \ru{Реализовал продуктовые эксперименты в потоке оплаты Яндекс Плюса: онсейл на главном экране оплаты увеличил продажи на 1\%, а онбординг на экране успеха повысил вовлечённость пользователей на 5\%}
+          \en{Implemented product experiments in the Yandex Plus payment flow: an upsell block on the main payment screen increased sales by 1\%, and onboarding on the success screen improved user engagement by 5\%}
+    \item \ru{Стек: TypeScript, React, Next.js, XState, Redux, Testplane, Playwright, Storybook, Node.js}
+          \en{Stack: TypeScript, React, Next.js, XState, Redux, Testplane, Playwright, Storybook, Node.js}
+\end{itemize}
+}
+
+\workentry
+{\dates{Feb 2024}{Sep 2024}}
+{\ru{Arenadata (Picodata) --- Rust-разработчик}\en{Arenadata (Picodata) --- Rust Developer}}
+{
+\begin{itemize}
+    \item \ru{Писал и оптимизировал Ansible-скрипты для развёртывания приложений}
+          \en{Wrote and optimized Ansible scripts for application deployment}
+    \item \ru{Перевёл автотесты с Lua на Rust, что ускорило их выполнение на 10\% и позволило использовать один язык в разработке и тестировании}
+          \en{Migrated autotests from Lua to Rust, improving execution time by 10\% and unifying development around a single language}
+    \item \ru{Стек: Rust, Tarantool, Kafka, Lua, Ansible}
+          \en{Stack: Rust, Tarantool, Kafka, Lua, Ansible}
+\end{itemize}
+}
+
+\workentry
+{\dates{Dec 2023}{Jan 2024}}
+{\ru{GraviLink --- Fullstack-разработчик}\en{GraviLink --- Fullstack Developer}}
+{
+\begin{itemize}
+    \item \ru{Реализовал MVP проекта для управления промышленными дронами-доставщиками}
+          \en{Delivered MVP for software used to manage industrial delivery drones}
+    \item \ru{Оптимизировал Docker Compose и настроил кеширование слоёв образов, что ускорило запуск проекта в 1.5 раза}
+          \en{Optimized Docker Compose setup and Docker layer caching, reducing project startup time by 1.5x}
+    \item \ru{Стек: Docker, Rust, WebAssembly}
+          \en{Stack: Docker, Rust, WebAssembly}
+\end{itemize}
+}
+
+\workentry
+{\dates{Aug 2022}{Sep 2023}}
+{\ru{Сбер --- Fullstack-разработчик}\en{Sberbank --- Fullstack Developer}}
+{
+\begin{itemize}
+    \item \ru{Перевёл автотесты с Selenium на Selenide, благодаря чему новый тест стали писать примерно за 30 минут вместо одного дня}
+          \en{Migrated UI autotests from Selenium to Selenide, reducing new test implementation time from about one day to 30 minutes}
+    \item \ru{Оптимизировал пагинацию frontend-backend, перевёл часть API на bulk-ручки и анализировал SQL-запросы, что ускорило загрузку отдельных страниц в 10 раз}
+          \en{Optimized frontend-backend pagination, introduced bulk API endpoints, and analyzed SQL queries, which sped up loading of some pages by 10x}
+    \item \ru{Стек: React, Material UI, Java, Spring, PostgreSQL, Selenium, Selenide}
+          \en{Stack: React, Material UI, Java, Spring, PostgreSQL, Selenium, Selenide}
+\end{itemize}
+}
+
+\workentry
+{\dates{Jul 2021}{Aug 2022}}
+{\ru{Яндекс Go --- C++ Backend Junior разработчик}\en{Yandex Go --- C++ Backend Junior Developer}}
+{
+\begin{itemize}
+    \item \ru{Реализовал кеши и bulk-версии ручек, что увеличило максимальный RPS в 10 раз без сильной потери актуальности данных}
+          \en{Implemented caching and bulk API endpoints, increasing maximum RPS capacity by 10x without significantly reducing data freshness}
+    \item \ru{Мигрировал базы данных под новые бизнес-сущности и добавил прогресс ачивок водителей; по данным аналитики, это увеличило переходы на вкладку ачивок на 45\%}
+          \en{Migrated databases for new business entities and added driver achievement progress tracking; according to analytics, this increased visits to the achievements tab by 45\%}
+    \item \ru{Стек: C++, userver, PostgreSQL, MongoDB, Elastic, Kibana}
+          \en{Stack: C++, userver, PostgreSQL, MongoDB, Elastic, Kibana}
+\end{itemize}
+}
+
+\section{\ru{Навыки}\en{Skills}}
+
+\begin{tabular}{@{}p{0.125\linewidth}|p{0.82\linewidth}@{}}
+\raggedleft \textbf{\ru{Frontend}\en{Frontend}} &
+React, TypeScript, JavaScript, Next.js, Redux, XState, Material UI, Storybook, Node.js \\
+\raggedleft \textbf{\ru{Testing}\en{Testing}} &
+Playwright, Testplane, Selenium, Selenide \\
+\raggedleft \textbf{\ru{Backend}\en{Backend}} &
+Java, Spring, Rust, PostgreSQL, REST API \\
+\raggedleft \textbf{\ru{Tools}\en{Tools}} &
+Git, K8s, Docker, Ansible \\
+\end{tabular}
+
+
+
+
+\section{\ru{Образование}\en{Education}}
+
+\begin{tabular}{@{}p{0.125\linewidth}|p{0.82\linewidth}@{}}
+\raggedleft \dates{2019}{2023} &
+\raisebox{-1.5pt}[0pt][0pt]{\textbf{\ru{МФТИ}\en{MIPT}} --- \ru{Бакалавр, Прикладная математика и информатика}
+\en{Bachelor's degree in Applied Mathematics and Computer Science}}
+\end{tabular}
+
+\vfill
+\begin{center}
+\large
+\href{https://github.com/NickZay/CV}{\ru{Актуальная версия этого резюме}\en{Up-to-date version of this CV}}
+\end{center}
+\end{document}
