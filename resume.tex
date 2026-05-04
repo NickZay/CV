@@ -56,7 +56,7 @@
 
 \newcommand{\workentry}[3]{
 \begin{tabular}{@{}p{0.125\linewidth}|p{0.82\linewidth}@{}}
-\raggedleft #1 & \raisebox{-1.5pt}[0pt][0pt]{\textbf{#2}} \\[-4pt]
+\raggedleft #1 & \raisebox{-1.5pt}[0pt][0pt]{\textbf{#2}} \\[-12pt]
 & #3
 \end{tabular}\vspace{1mm}
 }
@@ -66,8 +66,6 @@
 \begin{center}
     {\Huge \textbf{\ru{Никита Зайцев}\en{Nikita Zaytsev}}}
 \end{center}
-
-\vspace{2mm}
 
 \begin{center}
 \small
@@ -81,32 +79,39 @@
 \hspace{1cm}
 \faLinkedin\ \href{https://www.linkedin.com/in/nickzay}{nickzay}
 \hspace{1cm}
-hh: \href{https://hh.ru/resume/e86c2e50ff0bf0d5320039ed1f686758497349}{resume}
+\textbf{hh} \href{https://hh.ru/resume/e86c2e50ff0bf0d5320039ed1f686758497349}{resume}
 \end{center}
 
+\vspace{-4mm}
 \section{\ru{О себе}\en{Summary}}
 
-\ru{Frontend / Fullstack-разработчик с коммерческим опытом в Яндексе, Сбере и продуктовых командах. Основной фокус --- React, TypeScript и продуктовые интерфейсы; есть также backend-опыт на Java и Rust, который помогает быстрее разбираться в API, интеграциях и бизнес-логике.}
-\en{Frontend / Fullstack developer with commercial experience at Yandex, Sberbank, and product teams. Focused on React, TypeScript, and product web interfaces, with additional backend experience in Java and Rust that helps in working with APIs, integrations, and business logic.}
+\ru{Frontend / Fullstack-разработчик с коммерческим опытом в Яндексе, Сбере и других продуктовых командах. Основной фокус --- React, TypeScript и продуктовые интерфейсы; есть также backend-опыт на Java, Rust и C++, который помогает быстрее разбираться в API, интеграциях и бизнес-логике.}
+\en{Frontend / Fullstack developer with commercial experience at Yandex, Sberbank, and other product teams. Focused on React, TypeScript, and product web interfaces, with additional backend experience in Java, Rust and C++ that helps in working with APIs, integrations, and business logic.}
 
+\vspace{-2mm}
 \section{\ru{Опыт работы}\en{Work Experience}}
 
 \workentry
-{\dates{Sep 2024}{Present}}
-{\ru{Яндекс --- Frontend-разработчик}\en{Yandex --- Frontend Developer}}
+{\dates{\ru{Сентябрь}\en{Sep} 2024}{\ru{Н.в.}\en{Present}}}
+{\ru{Яндекс Плюс --- Frontend-разработчик}\en{Yandex Plus --- Frontend Developer}}
 {
 \begin{itemize}
-    \item \ru{Перевёз проект с yarn на pnpm, что ускорило прохождение CI в 2--3 раза}
-          \en{Migrated the project from yarn to pnpm, reducing CI execution time by 2--3x}
-    \item \ru{Реализовал продуктовые эксперименты в потоке оплаты Яндекс Плюса: онсейл на главном экране оплаты увеличил продажи на 1\%, а онбординг на экране успеха повысил вовлечённость пользователей на 5\%}
-          \en{Implemented product experiments in the Yandex Plus payment flow: an upsell block on the main payment screen increased sales by 1\%, and onboarding on the success screen improved user engagement by 5\%}
-    \item \ru{Стек: TypeScript, React, Next.js, XState, Redux, Testplane, Playwright, Storybook, Node.js}
-          \en{Stack: TypeScript, React, Next.js, XState, Redux, Testplane, Playwright, Storybook, Node.js}
+    \item \ru{Перенёс проект с yarn на pnpm, что ускорило прохождение CI в 2 раза}
+          \en{Migrated the project from yarn to pnpm, reducing CI execution time by 2x}
+    \item \ru{Реализовал допродажу тарифов и опций на главном экране оплаты Яндекс Плюса, что увеличило их продажи на 1\%}
+          \en{Implemented upsell block on the main Yandex Plus payment screen, that increased sales by 1\%}
+    \item \ru{Реализовал онбординг на экране успеха оплаты подписки Яндекс Плюса, что повысило вовлечённость пользователей на 5\%}
+          \en{Implemented onboarding on the success screen Yandex Plus Subscription, that improved user engagement by 5\%}
+    \item \ru{Добавил историю изменений данных о промокомпаниях в админку}
+          \en{Added changes history to promocompanies admin panel}
+    \item \ru{Реализовал новые экран по переходу в телеграм-бот Яндекс Плюса, а также экран для подсказки пользователю о наличии подписки на смежном аккаунте}
+          \en{Implemented new screen of suggesting to go to Yandex Plus telegram-bot, and screen telling user has subscription on adjacent account}
+    \item \ru{Стек}\en{Stack}: TypeScript, React, Next.js, XState, Redux, Testplane, Playwright, Storybook, Node.js
 \end{itemize}
 }
 
 \workentry
-{\dates{Feb 2024}{Sep 2024}}
+{\dates{\ru{Февраль}\en{February} 2024}{\ru{Сентябрь}\en{September} 2024}}
 {\ru{Arenadata (Picodata) --- Rust-разработчик}\en{Arenadata (Picodata) --- Rust Developer}}
 {
 \begin{itemize}
@@ -114,75 +119,78 @@ hh: \href{https://hh.ru/resume/e86c2e50ff0bf0d5320039ed1f686758497349}{resume}
           \en{Wrote and optimized Ansible scripts for application deployment}
     \item \ru{Перевёл автотесты с Lua на Rust, что ускорило их выполнение на 10\% и позволило использовать один язык в разработке и тестировании}
           \en{Migrated autotests from Lua to Rust, improving execution time by 10\% and unifying development around a single language}
-    \item \ru{Стек: Rust, Tarantool, Kafka, Lua, Ansible}
-          \en{Stack: Rust, Tarantool, Kafka, Lua, Ansible}
+    \item \ru{Стек}\en{Stack}: Rust, Tarantool, Kafka, Lua, Ansible
 \end{itemize}
 }
 
 \workentry
-{\dates{Dec 2023}{Jan 2024}}
+{\dates{\ru{Декабрь}\en{December} 2023}{\ru{Январь}\en{Januar} 2024}}
 {\ru{GraviLink --- Fullstack-разработчик}\en{GraviLink --- Fullstack Developer}}
 {
 \begin{itemize}
-    \item \ru{Реализовал MVP проекта для управления промышленными дронами-доставщиками}
+    \item \ru{Реализовывал MVP проекта для управления промышленными дронами-доставщиками}
           \en{Delivered MVP for software used to manage industrial delivery drones}
     \item \ru{Оптимизировал Docker Compose и настроил кеширование слоёв образов, что ускорило запуск проекта в 1.5 раза}
           \en{Optimized Docker Compose setup and Docker layer caching, reducing project startup time by 1.5x}
-    \item \ru{Стек: Docker, Rust, WebAssembly}
-          \en{Stack: Docker, Rust, WebAssembly}
+    \item \ru{Стек}\en{Stack}: Docker, Rust, WebAssembly, Linux
 \end{itemize}
 }
 
 \workentry
-{\dates{Aug 2022}{Sep 2023}}
+{\dates{\ru{Август}\en{August} 2022}{\ru{Сентябрь}\en{September} 2023}}
 {\ru{Сбер --- Fullstack-разработчик}\en{Sberbank --- Fullstack Developer}}
 {
 \begin{itemize}
-    \item \ru{Перевёл автотесты с Selenium на Selenide, благодаря чему новый тест стали писать примерно за 30 минут вместо одного дня}
+    \item \ru{Перевёл автотесты с Selenium на Selenide, из-за чего новый тест стали писать примерно за 30 минут вместо одного дня}
           \en{Migrated UI autotests from Selenium to Selenide, reducing new test implementation time from about one day to 30 minutes}
     \item \ru{Оптимизировал пагинацию frontend-backend, перевёл часть API на bulk-ручки и анализировал SQL-запросы, что ускорило загрузку отдельных страниц в 10 раз}
           \en{Optimized frontend-backend pagination, introduced bulk API endpoints, and analyzed SQL queries, which sped up loading of some pages by 10x}
-    \item \ru{Стек: React, Material UI, Java, Spring, PostgreSQL, Selenium, Selenide}
-          \en{Stack: React, Material UI, Java, Spring, PostgreSQL, Selenium, Selenide}
+    \item \ru{Стек}\en{Stack}: React, Material UI, Java, Spring, PostgreSQL, Selenium, Selenide, K8s
 \end{itemize}
 }
 
 \workentry
-{\dates{Jul 2021}{Aug 2022}}
+{\dates{\ru{Июль}\en{July} 2021}{\ru{Август}\en{August} 2022}}
 {\ru{Яндекс Go --- C++ Backend Junior разработчик}\en{Yandex Go --- C++ Backend Junior Developer}}
 {
 \begin{itemize}
-    \item \ru{Реализовал кеши и bulk-версии ручек, что увеличило максимальный RPS в 10 раз без сильной потери актуальности данных}
-          \en{Implemented caching and bulk API endpoints, increasing maximum RPS capacity by 10x without significantly reducing data freshness}
-    \item \ru{Мигрировал базы данных под новые бизнес-сущности и добавил прогресс ачивок водителей; по данным аналитики, это увеличило переходы на вкладку ачивок на 45\%}
-          \en{Migrated databases for new business entities and added driver achievement progress tracking; according to analytics, this increased visits to the achievements tab by 45\%}
-    \item \ru{Стек: C++, userver, PostgreSQL, MongoDB, Elastic, Kibana}
-          \en{Stack: C++, userver, PostgreSQL, MongoDB, Elastic, Kibana}
+    \item \ru{Реализовал кеши и bulk-версии ручек, что увеличило максимальный rps в 10 раз без сильной потери актуальности данных}
+          \en{Implemented caching and bulk API endpoints, increasing maximum rps capacity by 10x without significantly reducing data freshness}
+    \item \ru{Мигрировал базы данных под новые бизнес-сущности и добавил просмотр прогресса достижений водителей; по данным аналитики увеличило переходы на вкладку достижений на 45\%}
+          \en{Migrated databases for new business entities and added driver achievement progress tracking; according to analytics this increased visits to the achievements tab by 45\%}
+    \item \ru{Стек}\en{Stack}: C++, Userver, Python, PostgreSQL, MongoDB, Elastic, Kibana
 \end{itemize}
 }
 
+\vspace{-4mm}
 \section{\ru{Навыки}\en{Skills}}
 
-\begin{tabular}{@{}p{0.125\linewidth}|p{0.82\linewidth}@{}}
-\raggedleft \textbf{\ru{Frontend}\en{Frontend}} &
+\begin{tabular}{  @{}p{0.125\linewidth}|p{0.82\linewidth}@{}}
+\ru{Фронтенд}\en{Frontend} &
 React, TypeScript, JavaScript, Next.js, Redux, XState, Material UI, Storybook, Node.js \\
-\raggedleft \textbf{\ru{Testing}\en{Testing}} &
+\ru{Тестирование}\en{Testing} &
 Playwright, Testplane, Selenium, Selenide \\
-\raggedleft \textbf{\ru{Backend}\en{Backend}} &
-Java, Spring, Rust, PostgreSQL, REST API \\
-\raggedleft \textbf{\ru{Tools}\en{Tools}} &
+\ru{Бекенд}\en{Backend} &
+Java, Spring, Rust, C++, Python, PostgreSQL\\
+\ru{Инструменты}\en{Tools} &
 Git, K8s, Docker, Ansible \\
 \end{tabular}
 
 
 
-
+\vspace{-2mm}
 \section{\ru{Образование}\en{Education}}
 
 \begin{tabular}{@{}p{0.125\linewidth}|p{0.82\linewidth}@{}}
-\raggedleft \dates{2019}{2023} &
+\raggedleft 2019 -- 2023 &
 \raisebox{-1.5pt}[0pt][0pt]{\textbf{\ru{МФТИ}\en{MIPT}} --- \ru{Бакалавр, Прикладная математика и информатика}
-\en{Bachelor's degree in Applied Mathematics and Computer Science}}
+\en{Bachelor's degree in Applied Mathematics and Computer Science}} \\
+\raggedleft 2023 -- 2024 &
+\raisebox{-1.5pt}[0pt][0pt]{\textbf{\ru{МФТИ}\en{MIPT}} --- \ru{Магистратура, Прикладная математика и информатика, неоконченное}
+\en{Master's degree in Applied Mathematics and Computer Science, unfinished}} \\
+\raggedleft 2023 -- 2024 &
+\raisebox{-1.5pt}[0pt][0pt]{\textbf{\ru{ШАД}\en{YSDA}} --- \ru{Инфраструктура больших данных, неоконченное}
+\en{Big Data Infrastructure, unfinished}}
 \end{tabular}
 
 \vfill
